@@ -64,11 +64,11 @@ import com.crm.qa.base.TestBase;
 
 	public void onException(Throwable error, WebDriver driver) {
 		System.out.println("Exception occured: " + error);
-//		try {
-//			Common.takeScreenshotAtEndOfTest();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		try {
+			Common.takeScreenshotAtEndOfTest();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {

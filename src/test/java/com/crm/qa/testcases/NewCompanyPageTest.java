@@ -45,17 +45,17 @@ public class NewCompanyPageTest extends TestBase {
 		Assert.assertTrue(newCompanyPage.ValidateNewContactPage(), "Problem : Not able to open New company Page.");
 		newCompanyPage.CompanyName(excel.getdata("Sheet1", 0, 0));
 	}
-//	@Test(priority = 2)
-//	public void NewCompanyPage1(){
-//		newCompanyPage.CompanyName("Subhajit");
-//		Select se = new Select(driver.findElement(By.name("status")));
-//		se.selectByVisibleText("Active");
-//		newCompanyPage.saveButtonNewCompany();
-//		Assert.assertTrue(newCompanyPage.ValidateSavedNewContactPage(), "Problem : Company Page not saved.");
-//	}
-//	@AfterMethod
-//	public void dismiss(){
-//		driver.quit();
-//	}
+	@Test(priority = 2)
+	public void NewCompanyPage1(){
+		newCompanyPage.CompanyName("Subhajit");
+		Select se = new Select(driver.findElement(By.name("status")));
+		se.selectByVisibleText("Active");
+		newCompanyPage.saveButtonNewCompany();
+		Assert.assertTrue(newCompanyPage.ValidateSavedNewContactPage(), "Problem : Company Page not saved.");
+	}
+	@AfterMethod
+	public void dismiss(){
+		driver.quit();
+	}
 	
 }
