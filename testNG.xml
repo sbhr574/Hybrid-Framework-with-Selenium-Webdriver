@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="master" >
+ 
+  <test name="Regression1">
+  <parameter name="url" value="http://localhost/opsngn/opsngn.html"></parameter>
+  
+    <classes>
+      <class name="com.opsNGN.qa.Testcases.HomePageTest"/>
+      
+    </classes>
+  </test>
+</suite>
