@@ -1,7 +1,10 @@
 package com.crm.qa.testcases;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -12,6 +15,7 @@ import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.Common;
+import com.crm.qa.util.WaitUntil;
 import com.crm.qa.util.XSSFSheetUtil;
 
 
@@ -21,6 +25,7 @@ public class NewCompanyPageTest extends TestBase {
 	Common common;
 	NewCompanyPage newCompanyPage;
 	XSSFSheetUtil excel;
+	WaitUntil happy;
 
 	NewCompanyPageTest(){
 		super();
@@ -31,9 +36,16 @@ public class NewCompanyPageTest extends TestBase {
 		initialization();
 		loginpage =new LoginPage();
 		common =  new Common();
+		happy =new WaitUntil();
 		newCompanyPage = new NewCompanyPage();
 		excel = XSSFSheetUtil.getXssfSheetUtil(excelfile);
-		homepage = loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
+		
+		loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
+		 WebDriverWait wait = new WebDriverWait(driver,30);
+//		    WebElement element = wait.until(
+//		                        ExpectedConditions.elementToBeClickable(By.cssSelector(".btn.btn-small")));
+//		    element.click();
+		happy.clickOn(driver, driver.findElement(By.cssSelector("input.btn.btn-small")), 30);
 		common.switchToFream();
 		//Thread.sleep(1000);
 		common.moveEle("//a[contains(text(),'Companies')]");

@@ -29,9 +29,9 @@ public class LoginPage extends TestBase {
 	public HomePage login(String un,String pwd) throws InterruptedException{
 		username.sendKeys(un);
 		password.sendKeys(pwd);
-		Thread.sleep(2000);
 		submit.click();
-		return new HomePage();//This method is returning homepage class objetc
+		//This method is returning homepage class objetc
+		return new HomePage();
 	}
 	public boolean Logo(){
 		return logo.isDisplayed();
