@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36930" started-at="2019-01-15T03:16:10Z" finished-at="2019-01-15T03:16:47Z">
+  <suite name="Default suite" duration-ms="38508" started-at="2019-01-15T21:08:47Z" finished-at="2019-01-15T21:09:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36930" started-at="2019-01-15T03:16:10Z" finished-at="2019-01-15T03:16:47Z">
-      <class name="com.crm.qa.testcases.CalendarNewEventTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.crm.qa.testcases.CalendarNewEventTest@3532ec19]" name="setup" is-config="true" duration-ms="33006" started-at="2019-01-15T08:46:10Z" finished-at="2019-01-15T08:46:43Z">
+    <test name="Default test" duration-ms="38508" started-at="2019-01-15T21:08:47Z" finished-at="2019-01-15T21:09:25Z">
+      <class name="com.crm.qa.testcases.NewDealTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.crm.qa.testcases.NewDealTest@3532ec19]" name="setup" is-config="true" duration-ms="38465" started-at="2019-01-16T02:38:47Z" finished-at="2019-01-16T02:39:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="CalendarNewEventTest()[pri:0, instance:com.crm.qa.testcases.CalendarNewEventTest@3532ec19]" name="CalendarNewEventTest" duration-ms="3899" started-at="2019-01-15T08:46:43Z" finished-at="2019-01-15T08:46:47Z">
+        <test-method status="PASS" signature="NewDealTest()[pri:0, instance:com.crm.qa.testcases.NewDealTest@3532ec19]" name="NewDealTest" duration-ms="7" started-at="2019-01-16T02:39:25Z" finished-at="2019-01-16T02:39:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CalendarNewEventTest -->
-      </class> <!-- com.crm.qa.testcases.CalendarNewEventTest -->
+        </test-method> <!-- NewDealTest -->
+      </class> <!-- com.crm.qa.testcases.NewDealTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
