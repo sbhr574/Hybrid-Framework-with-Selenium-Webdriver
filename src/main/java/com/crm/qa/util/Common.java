@@ -3,12 +3,14 @@ package com.crm.qa.util;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import com.crm.qa.base.TestBase;
 
@@ -46,7 +48,10 @@ public class Common extends TestBase{
 				FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
 				
 				}
-	
+	public void selectValue(WebElement element,String value){
+		Select options = new Select(element);
+		options.selectByVisibleText(value);
+	}
 	
 	
 }

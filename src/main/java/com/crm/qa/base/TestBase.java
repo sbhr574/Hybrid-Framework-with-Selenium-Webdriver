@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.crm.qa.util.WebEventListener;
@@ -36,7 +37,7 @@ public class TestBase {
 			public static void initialization(){
 			String browsername= prop.getProperty("browser");
 			
-			if (browsername.equals("chrome"))
+			if (browsername.equals("chrome")){
 				System.setProperty("webdriver.chrome.driver", "C:\\Users\\MONIDEEPA\\Desktop\\gecko\\chromedriver.exe");
 				driver = new ChromeDriver();
 				
@@ -45,11 +46,11 @@ public class TestBase {
 						eventListener = new WebEventListener();
 						e_driver.register(eventListener);
 						driver = e_driver;
-				
-//			else if (browsername.equals("firefox")){
-//					System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
-//					driver = new ChromeDriver();
-//					}
+			}else
+			if (browsername.equals("firefox")){
+					System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
+					driver = new FirefoxDriver();
+					}
 			driver.manage().window().maximize();
 			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

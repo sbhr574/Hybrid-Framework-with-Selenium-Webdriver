@@ -37,4 +37,5 @@ public class HomePageTest extends TestBase {
 		//While navigateing to other page/or landing to other page
 		newCompanyPage = homepage.ClickOnNewCompanie();//ClickOnNewCompanie is returning NewCompanyPage class object so need to store NewCompanyPage referance variable.
 	}
+	
 }

@@ -3,14 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.NewCompanyPageTest">
+      <class name="com.crm.qa.testcases.CalendarNewEventTest">
         <methods>
-          <include name="NewCompanyPage"/>
           <include name="setup"/>
-          <include name="NewCompanyPage1"/>
-          <include name="dismiss"/>
+          <include name="CalendarNewEventTest"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.NewCompanyPageTest -->
+      </class> <!-- com.crm.qa.testcases.CalendarNewEventTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
