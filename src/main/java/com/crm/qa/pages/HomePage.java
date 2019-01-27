@@ -21,6 +21,7 @@ public class HomePage extends TestBase{
 	 @FindBy(xpath = "//a[contains(text(),'Month View')]")@CacheLookup WebElement monthView;
 	 @FindBy(xpath = "//a[text()='Deals']")@CacheLookup WebElement deals;
 	 @FindBy(xpath = "//a[text()='New Deal']")@CacheLookup WebElement newDeal;
+	 
 
 	 public HomePage(){
 			PageFactory.initElements(driver, this);
@@ -45,6 +46,10 @@ public class HomePage extends TestBase{
 	public void newDeal(){
 		common.mouseHover("//a[text()='Deals']");
 		newDeal.click();
+	}
+	public void mouseHoverToCalendar(){
+		common.mouseHover("//a[contains(text(),'Calendar')]");
+		js.clickElement(newEvent, driver);
 	}
 	
 }

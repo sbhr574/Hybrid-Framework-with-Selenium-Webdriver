@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38508" started-at="2019-01-15T21:08:47Z" finished-at="2019-01-15T21:09:25Z">
+  <suite name="Default suite" duration-ms="24406" started-at="2019-01-27T15:45:03Z" finished-at="2019-01-27T15:45:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38508" started-at="2019-01-15T21:08:47Z" finished-at="2019-01-15T21:09:25Z">
-      <class name="com.crm.qa.testcases.NewDealTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.crm.qa.testcases.NewDealTest@3532ec19]" name="setup" is-config="true" duration-ms="38465" started-at="2019-01-16T02:38:47Z" finished-at="2019-01-16T02:39:25Z">
+    <test name="Default test" duration-ms="24406" started-at="2019-01-27T15:45:03Z" finished-at="2019-01-27T15:45:28Z">
+      <class name="com.crm.qa.testcases.SelectingDateFromCalendarTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.crm.qa.testcases.SelectingDateFromCalendarTest@3532ec19]" name="setup" is-config="true" duration-ms="21035" started-at="2019-01-27T21:15:03Z" finished-at="2019-01-27T21:15:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="NewDealTest()[pri:0, instance:com.crm.qa.testcases.NewDealTest@3532ec19]" name="NewDealTest" duration-ms="7" started-at="2019-01-16T02:39:25Z" finished-at="2019-01-16T02:39:25Z">
+        <test-method status="PASS" signature="selectingDateFromCalendar()[pri:0, instance:com.crm.qa.testcases.SelectingDateFromCalendarTest@3532ec19]" name="selectingDateFromCalendar" duration-ms="3350" started-at="2019-01-27T21:15:25Z" finished-at="2019-01-27T21:15:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewDealTest -->
-      </class> <!-- com.crm.qa.testcases.NewDealTest -->
+        </test-method> <!-- selectingDateFromCalendar -->
+      </class> <!-- com.crm.qa.testcases.SelectingDateFromCalendarTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

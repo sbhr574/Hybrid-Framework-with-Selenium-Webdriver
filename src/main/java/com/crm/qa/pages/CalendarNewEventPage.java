@@ -24,6 +24,7 @@ public class CalendarNewEventPage extends TestBase{
 	JSExecutor js=new JSExecutor();
 	
 	@FindBy(id = "f_trigger_c_start")@CacheLookup WebElement calendarButtonFrom;
+	@FindBy(id = "f_trigger_c_end")@CacheLookup WebElement calendarButtonTo;
 	@FindBy(id = "fieldId_start")@CacheLookup WebElement calendarDateFrom;
 	@FindBy(id = "title")@CacheLookup WebElement titleBox;
 	@FindBy(id = "fieldId_end")@CacheLookup WebElement calendarDateTo;
@@ -59,6 +60,9 @@ public class CalendarNewEventPage extends TestBase{
 	public void calendarButtonForFrom(){
 		calendarButtonFrom.click();
 	}
+	public void calendarButtonForTo(){
+		calendarButtonTo.click();
+	}
 	public void calendarDateTo(String dateValue){
 		js.selectDateByJS(driver, calendarDateTo, dateValue);
 	}
@@ -79,5 +83,6 @@ public class CalendarNewEventPage extends TestBase{
 	public void saveButtonForCalendarNewEvent(){
 		saveButtonForCalendarNewEvent.click();
 	}
+	
 	
 }
