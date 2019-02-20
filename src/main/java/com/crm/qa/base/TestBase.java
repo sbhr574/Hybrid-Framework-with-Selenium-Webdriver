@@ -19,14 +19,13 @@ public class TestBase {
 	public static Properties prop;
 	public  static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
-	public String excelfile="C:\\Users\\MONIDEEPA\\Desktop\\CRM\\ProjectFreeCRM\\src\\main\\java\\com\\crm\\qa\\testdata\\TestData.xlsx";	
+	public String excelfile="C:\\Users\\Desktop\\CRM\\ProjectFreeCRM\\src\\main\\java\\com\\crm\\qa\\testdata\\TestData.xlsx";	
 
 	
      public TestBase(){
 		try{
 			prop= new Properties();
-		FileInputStream ip = new FileInputStream("C:\\Users\\MONIDEEPA\\Desktop\\CRM\\ProjectFreeCRM\\src\\main"
-				+ "\\java\\com\\crm\\qa\\config\\config.propirties");
+		FileInputStream ip = new FileInputStream("C:\\Users\\Subhajit\\git\\ProjectThanos\\src\\main\\java\\com\\crm\\qa\\config\\config.propirties");
 		prop.load(ip);
 		}catch (FileNotFoundException e){
 			e.printStackTrace();
@@ -38,7 +37,7 @@ public class TestBase {
 			String browsername= prop.getProperty("browser");
 			
 			if (browsername.equals("chrome")){
-				System.setProperty("webdriver.chrome.driver", "C:\\Users\\MONIDEEPA\\Desktop\\gecko\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\Subhajit\\Desktop\\NotePad\\chromedriver.exe");
 				driver = new ChromeDriver();
 				
 				e_driver = new EventFiringWebDriver(driver);
