@@ -3,7 +3,7 @@
 <suite name="master" >
  
   <test name="Regression1">
-  <parameter name="url" value="http://localhost/opsngn/opsngn.html"></parameter>
+  <parameter name="url" value=""></parameter>
   
     <classes>
       <class name="com.opsNGN.qa.Testcases.HomePageTest"/>

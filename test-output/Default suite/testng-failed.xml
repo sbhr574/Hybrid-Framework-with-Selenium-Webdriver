@@ -3,12 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.SelectingDateFromCalendarTest">
+      <class name="com.crm.qa.testcases.DateSelectFromCalendarTest">
         <methods>
-          <include name="selectingDateFromCalendar"/>
           <include name="setup"/>
+          <include name="SelectingDateFromCalendar"/>
+          <include name="navigateCalendarPage"/>
+          <include name="loginOperation"/>
+          <include name="validatetitle"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.SelectingDateFromCalendarTest -->
+      </class> <!-- com.crm.qa.testcases.DateSelectFromCalendarTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

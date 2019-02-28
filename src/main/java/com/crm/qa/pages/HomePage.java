@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.util.Common;
+import com.crm.qa.util.Constant;
 import com.crm.qa.util.JSExecutor;
 
 public class HomePage extends TestBase{
@@ -27,17 +28,23 @@ public class HomePage extends TestBase{
 			PageFactory.initElements(driver, this);
 		}
 
+	//Navigating to all the module pages
+	public ContactsPage navigateToContactPage(){
+		common.selectvalueFromList(Constant.homePage_List.List_Of_HomePage, "Contacts");
+		return new ContactsPage();
+	}
+	public CalendarPage navigateToCalendarPage(){
+		common.selectvalueFromList(Constant.homePage_List.List_Of_HomePage, "Calendar");
+		return new CalendarPage();
+	}
+	
+	
+	public void NewEvent(){
+		js.clickElement(newEvent, driver);
+	}
 	public NewCompanyPage ClickOnNewCompanie() {
 		clickOnNewCompanie.click();
 		return new NewCompanyPage();
-
-	}
-	public ContactsPage contacts(){
-		contacts.click();
-		return new ContactsPage();
-	}
-	public void NewEvent(){
-		js.clickElement(newEvent, driver);
 	}
 	public CalendarMonthViewPage navigateToMonthView(){
 		js.clickElement(monthView, driver);

@@ -1,9 +1,9 @@
 package com.crm.qa.testcases;
 
-import java.awt.Desktop.Action;
+import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.BeforeMethod;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
@@ -19,21 +19,27 @@ public class LoginTest extends TestBase {
 		super();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void setup(){
 		initialization();
 		loginpage =new LoginPage();
 	}
 	
-//	@Test
-//	public void validatetitle(){
-//		String title = loginpage.gettitle();
-//		Assert.assertEquals(title, "sdjsdfjdfj");
-//	}
-	@Test
-	public void usernametype() throws InterruptedException{
+	@Test(priority = 0)
+	public void validatetitle(){
+		String title = loginpage.gettitle();
+		Assert.assertEquals(title, "Free CRM software in the cloud for sales and service");
+	}
+	@Test(dependsOnMethods = { "validatetitle" })
+	public void loginOperation() throws InterruptedException{
 		homepage = loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
-		
+//		try{
+//		Assert.assertFalse(loginpage.invalidLogin(), "Login in Invalid");
+//		}catch(org.openqa.selenium.NoSuchElementException e){
+//			Assert.assertTrue(loginpage.loginConfirmation(), "Login Failed");
+//			System.out.println("<<<Login Success>>>");
+//		}
+		assertEquals(true, loginpage.invalidLogin());
 	}
 	
 	

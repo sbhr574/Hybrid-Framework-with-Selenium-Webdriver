@@ -1,9 +1,9 @@
 package com.crm.qa.util;
 
-public final class Constant {
+public class Constant {
 
-	public interface dj {
-//	public static final  CONSTANT_XPATH = "//a[contains(text(),'Companies')]";
-		public static final String categoryType = "";
+	public static interface homePage_List {
+		public static final String List_Of_HomePage = "//div[@id='main-nav']//span";
+		
 	}
 }

@@ -24,19 +24,23 @@ public class ContactTest extends TestBase{
 	@BeforeMethod
 	public void setup() throws Exception {
 		initialization();
-		loginpage =new LoginPage();
+		loginpage = new LoginPage();
 		contactTest = new ContactsPage();
-		homepage = loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
 		takeAction = new Common();
-		takeAction.switchToFream();
+		String title = loginpage.gettitle();
+		Assert.assertEquals(title, "Free CRM software in the cloud for sales and service");
+		homepage = loginpage.login(prop.getProperty("username"),prop.getProperty("password"));
+		try{
+		Assert.assertFalse(loginpage.invalidLogin(), "Login in Invalid");
+		}catch(org.openqa.selenium.NoSuchElementException e){
+			Assert.assertTrue(loginpage.loginConfirmation(), "Login Failed");
+			System.out.println("<<<Login Success>>>");
+		}
 	}
 	@Test
-	public void contactPageTest() throws InterruptedException{
-		
-		takeAction.mouseHover("//a[contains(text(),'Contacts')]");
-		Thread.sleep(2000);
-		contactTest.NewContact();
-		Assert.assertTrue(contactTest.contactPageVerify(), "lebel is missing");
+	public void contactPageTest() {
+		homepage.navigateToContactPage();
+		contactTest.ValidateContactPage();
 	}
 	
 	

@@ -34,12 +34,19 @@ public class Common extends TestBase{
 		for(WebElement option : Options){
 			if(option.getText().equals(value)){
 				option.click();
+				break;
 			}
-			else{
-				System.out.println("value is not present");
 			}
 		}
-	}
+	public void selectvalueFromList(String xpath,String value){
+		List<WebElement> Options = driver.findElements(By.xpath(xpath));
+		for(WebElement option : Options){
+			if(option.getText().equals(value)){
+				option.click();
+				break;
+			}
+			}
+		}
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		//Step1:take a screenshot and store it as a file format.
 				File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);//output type is file type//coverting driver to take a screen shot TakesScreenshot(I) and then getScreenshotAs this method will execute 
