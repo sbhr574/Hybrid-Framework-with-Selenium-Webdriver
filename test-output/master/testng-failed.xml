@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [master]" parallel="methods">
+  <test name="Regression1(failed)" parallel="methods">
+    <parameter name="url" value=""/>
+    <classes>
+      <class name="com.crm.qa.testcases.LoginTest">
+        <methods>
+          <include name="loginOperation"/>
+          <include name="setup"/>
+          <include name="validatetitle"/>
+        </methods>
+      </class> <!-- com.crm.qa.testcases.LoginTest -->
+    </classes>
+  </test> <!-- Regression1(failed) -->
+</suite> <!-- Failed suite [master] -->
