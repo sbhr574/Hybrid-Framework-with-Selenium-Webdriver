@@ -63,12 +63,19 @@ import com.crm.qa.base.TestBase;
 	}
 
 	public void onException(Throwable error, WebDriver driver) {
-//		System.out.println("Exception occured: " + error);
-//		try {
-//			Common.takeScreenshotAtEndOfTest();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
+		System.out.println("Exception occured :: " + error);
+//		screenshot.getScreenshot();
+		WebElement test = driver.findElement(By.id("errormessage-dialog"));
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+		
+			e.printStackTrace();
+		}
+		if(test.isDisplayed()){
+			System.out.println("<--------> Alert or Warning message :: "+test.getText());
+		}
+		
 	}
 
 	public void beforeFindBy(By by, WebElement element, WebDriver driver) {
